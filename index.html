@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de dados - Nicolas</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js">
+    </script>
+</head>
+
+<body>
+    <h1>
+        Análise de dados - Nicolas
+    </h1>
+    <h3>Planilha A</h3>
+    <table id="tableA-ID" class="display">
+        <thead class="th1">
+            <tr>
+                <th>NomeDoArquivoRecebido</th>
+                <th>NumeroNota</th>
+                <th>ValorTotal</th>
+                <th>DataVencimento</th>
+                <th>DataEmissão</th>
+                <th>IDUnico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Energia - CEEE - Sua fatura por email n_0.pdf</td>
+                <td>164901</td>
+                <td>R$ 73,95</td>
+                <td>20/12/2022</td>
+                <td>07/11/2022</td>
+                <td>10594914</td>
+            </tr>
+            <tr>
+                <td>Agua - DMAE - Sua fatura por email n_1.pdf</td>
+                <td>232966</td>
+                <td>R$ 99,57</td>
+                <td>23/11/2022</td>
+                <td>08/11/2022</td>
+                <td>4812484</td>
+            </tr>
+            <tr>
+                <td>Agua - CORSAN - Sua fatura por email n_3.pdf</td>
+                <td>249930</td>
+                <td>R$ 1.342,14</td>
+                <td>20/12/2022</td>
+                <td>08/11/2024</td>
+                <td>4824091</td>
+            </tr>
+            <tr>
+                <td>Energia - CPFL - Sua fatura por email n_4.pdf</td>
+                <td>253889</td>
+                <td>R$ 291,33</td>
+                <td>20/12/2022</td>
+                <td>08/11/2025</td>
+                <td>997769611</td>
+            </tr>
+            <tr>
+                <td>Energia - ENEL - Sua fatura por email n_5.pdf</td>
+                <td>260065</td>
+                <td>R$ 510,03</td>
+                <td>20/12/2022</td>
+                <td>08/11/2026</td>
+                <td>4818890</td>
+            </tr>
+            <tr>
+                <td>Energia - CEEE - Sua fatura por email n_11.pdf</td>
+                <td>282811</td>
+                <td>R$ 5.725,29</td>
+                <td>20/12/2022</td>
+                <td>09/11/2022</td>
+                <td>19243430</td>
+            </tr>
+            <tr>
+                <td>Energia - CEEE - Sua fatura por email n_12.pdf</td>
+                <td>282810</td>
+                <td>R$ 8.943,49</td>
+                <td>20/12/2022</td>
+                <td>09/11/2022</td>
+                <td>27686451</td>
+            </tr>
+            <tr>
+                <td>Energia - CEEE - Sua fatura por email n_13.pdf</td>
+                <td>355714</td>
+                <td>R$ 281,79</td>
+                <td>23/11/2022</td>
+                <td>09/11/2023</td>
+                <td>1005430966</td>
+            </tr>
+            <tr>
+                <td>Agua - DMAE - Sua fatura por email n_14.pdf</td>
+                <td>350868</td>
+                <td>R$ 149,39</td>
+                <td>23/11/2022</td>
+                <td>09/11/2024</td>
+                <td>44166290</td>
+            </tr>
+            <tr>
+                <td>Energia - CEEE - Sua fatura por email n_15.pdf</td>
+                <td>297385</td>
+                <td>R$ 5.583,96</td>
+                <td>23/11/2022</td>
+                <td>09/11/2025</td>
+                <td>19243430</td>
+            </tr>
+            <tr>
+                <td>Energia - CEEE - Sua fatura por email n_16.pdf</td>
+                <td>331990</td>
+                <td>R$ 119,09</td>
+                <td>23/11/2022</td>
+                <td>09/11/2026</td>
+                <td>4830946</td>
+            </tr>
+            <tr>
+                <td>Agua - DMAE - Sua fatura por email n_17.pdf</td>
+                <td>506357</td>
+                <td>R$ 208,13</td>
+                <td>23/11/2022</td>
+                <td>09/11/2027</td>
+                <td>51427257</td>
+            </tr>
+            <tr>
+                <td>Energia - CEEE - Sua fatura por email n_18.pdf</td>
+                <td>297367</td>
+                <td>R$ 8.803,24</td>
+                <td>23/11/2022</td>
+                <td>09/11/2028</td>
+                <td>27686451</td>
+            </tr>
+            <tr>
+                <td>Energia - CEEE - Sua fatura por email n_19.pdf</td>
+                <td>457216</td>
+                <td>R$ 184,43</td>
+                <td>23/11/2022</td>
+                <td>09/11/2029</td>
+                <td>54318327</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Planilha B</h3>
+    <table id="tableB-ID" class="display">
+        <thead class="th2">
+            <tr>
+                <th>RazaoSocial</th>
+                <th>CodFornecedorJDE</th>
+                <th>TipoLancamento</th>
+                <th>InscEstad</th>
+                <th>IDUnico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CEEE - Companhia Estadual de Distribuicao de Energia Eletrica</td>
+                <td>1521563</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>10594914</td>
+
+            </tr>
+            <tr>
+                <td>DMAE - PORTO ALEGRE DEPARTAMENTO MUNICIPAL DE AGUAS E ESGOTOS</td>
+                <td>2456985</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>4812484</td>
+
+            </tr>
+            <tr>
+                <td>CORSAN - Companhia Riograndense de Saneamento</td>
+                <td>1989070</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>4824091</td>
+
+            </tr>
+            <tr>
+                <td>CPFL - CPFL Energia S.A.</td>
+                <td>1208198</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>997769611</td>
+
+            </tr>
+            <tr>
+                <td>ENEL - Eletropaulo Metropolitana Eletricidade de São Paulo - SA</td>
+                <td>709891</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>4818890</td>
+
+            </tr>
+            <tr>
+                <td>CEEE - CIA ESTADUAL DE DISTR DE ENERG ELETR</td>
+                <td>1521563</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>19243430</td>
+
+            </tr>
+            <tr>
+                <td>CEEE - CIA ESTADUAL DE DISTR DE ENERG ELETR</td>
+                <td>1521563</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>27686451</td>
+
+            </tr>
+            <tr>
+                <td>CEEE - CIA ESTADUAL DE DISTR DE ENERG ELETR</td>
+                <td>1521563</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>1005430966</td>
+
+            </tr>
+            <tr>
+                <td>DMAE - PORTO ALEGRE DEPARTAMENTO MUNICIPAL DE AGUAS E ESGOTOS</td>
+                <td>2456985</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>44166290</td>
+
+            </tr>
+            <tr>
+                <td>CEEE - CIA ESTADUAL DE DISTR DE ENERG ELETR</td>
+                <td>1521563</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>19243430</td>
+
+            </tr>
+            <tr>
+                <td>CEEE - CIA ESTADUAL DE DISTR DE ENERG ELETR</td>
+                <td>1521563</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>4830946</td>
+
+            </tr>
+            <tr>
+                <td>DMAE - PORTO ALEGRE DEPARTAMENTO MUNICIPAL DE AGUAS E ESGOTOS</td>
+                <td>2456985</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>51427257</td>
+
+            </tr>
+            <tr>
+                <td>CEEE - CIA ESTADUAL DE DISTR DE ENERG ELETR</td>
+                <td>1521563</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>27686451</td>
+
+            </tr>
+            <tr>
+                <td>CEEE - CIA ESTADUAL DE DISTR DE ENERG ELETR</td>
+                <td>1521563</td>
+                <td>130761</td>
+                <td>130761</td>
+                <td>54318327</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Planilha C</h3>
+    <table id="tableC-ID" class="display">
+        <thead class="th3">
+            <tr>
+                <th>CodFornecedorJDE</th>
+                <th>Aprovador1A</th>
+                <th>Aprovador1B</th>
+                <th>Aprovador2A</th>
+                <th>Aprovador2B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1521563</td>
+                <td>325260</td>
+                <td>13076196</td>
+                <td>13076179</td>
+                <td>23117281</td>
+
+            </tr>
+            <tr>
+                <td>2456985</td>
+                <td>204639</td>
+                <td>13076195</td>
+                <td>13076180</td>
+                <td>23117282</td>
+
+            </tr>
+            <tr>
+                <td>1989070</td>
+                <td>204639</td>
+                <td>13076194</td>
+                <td>13076181</td>
+                <td>23117283</td>
+
+            </tr>
+            <tr>
+                <td>1208198</td>
+                <td>204639</td>
+                <td>13076193</td>
+                <td>13076182</td>
+                <td>23117284</td>
+
+            </tr>
+            <tr>
+                <td>709891</td>
+                <td>204639</td>
+                <td>13076192</td>
+                <td>13076183</td>
+                <td>23117285</td>
+
+            </tr>
+            <tr>
+                <td>1521563</td>
+                <td>204639</td>
+                <td>13076191</td>
+                <td>13076184</td>
+                <td>23117286</td>
+
+            </tr>
+            <tr>
+                <td>1521563</td>
+                <td>211491</td>
+                <td>13076190</td>
+                <td>13076185</td>
+                <td>23117287</td>
+
+            </tr>
+            <tr>
+                <td>1521563</td>
+                <td>294176</td>
+                <td>13076191</td>
+                <td>13076186</td>
+                <td>23117288</td>
+
+            </tr>
+            <tr>
+                <td>2456985</td>
+                <td>211491</td>
+                <td>13076192</td>
+                <td>13076187</td>
+                <td>23117289</td>
+
+            </tr>
+            <tr>
+                <td>1521563</td>
+                <td>204639</td>
+                <td>13076193</td>
+                <td>13076188</td>
+                <td>23117290</td>
+
+            </tr>
+            <tr>
+                <td>1521563</td>
+                <td>163598</td>
+                <td>13076194</td>
+                <td>13076189</td>
+                <td>23117291</td>
+
+            </tr>
+            <tr>
+                <td>2456985</td>
+                <td>325260</td>
+                <td>13076195</td>
+                <td>13076190</td>
+                <td>23117292</td>
+
+            </tr>
+            <tr>
+                <td>1521563</td>
+                <td>211491</td>
+                <td>13076196</td>
+                <td>13076191</td>
+                <td>23117293</td>
+
+            </tr>
+            <tr>
+                <td>1521563</td>
+                <td>325260</td>
+                <td>13076197</td>
+                <td>13076192</td>
+                <td>23117294</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // Initialize the DataTable
+        $(document).ready(function () {
+            $('#tableA-ID').DataTable({
+                info: false
+            });
+            $('#tableB-ID').DataTable({
+                info: false
+            });
+            $('#tableC-ID').DataTable({
+                info: false
+            });
+        }); 
+    </script>
+</body>
+
+</html>
